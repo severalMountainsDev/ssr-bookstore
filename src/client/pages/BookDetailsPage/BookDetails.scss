@@ -1,0 +1,52 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.book-details {
+  @extend %flex-center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.book {
+  background-color: $white-color;
+  border-radius: $border-radius;
+  padding: 4rem;
+  margin: 2rem;
+  box-shadow: 0 0 1rem $light-black-color;
+  @extend %flex-center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.book-info-title,
+.book-description-title {
+  text-align: center;
+  font-size: $font-size-large;
+  margin-bottom: 1rem;
+}
+
+.info-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-item {
+  margin-bottom: 0.8rem;
+}
+
+.info-label {
+  font-weight: bold;
+}
+
+.book-description {
+  font-size: $font-size-regular;
+  line-height: 1.5;
+}
+
+.button-back {
+  @include button-style($main-color, $main-dark-color);
+  font-size: $font-size-regular;
+  left: 3rem;
+  top: 3rem;
+}

@@ -1,0 +1,32 @@
+@mixin respond-to($size) {
+  @if $size == 'small' {
+    @media (max-width: 550px) { @content; }
+  } @else if $size == 'medium' {
+    @media (min-width: 551px) and (max-width: 780px) { @content; }
+  } @else if $size == 'large' {
+    @media (min-width: 781px) and (max-width: 991px) { @content; }
+  } @else if $size == 'xlarge' {
+    @media (min-width: 992px) { @content; }
+  }
+}
+
+@mixin button-style($bgColor, $hoverColor) {
+  background-color: $bgColor;
+  color: $white-color;
+  border: none;
+  padding: $padding-regular;
+  border-radius: $border-radius;
+  margin-right: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  
+  &:hover {
+    background-color: $hoverColor;
+  }
+}
+
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

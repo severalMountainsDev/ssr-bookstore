@@ -1,0 +1,103 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.book-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $light-black-color;
+  @extend %flex-center;
+  z-index: 5;
+  transition: $transition;
+
+  &.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &.closed {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.dialog-content {
+  background: $white-color;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  width: 90%;
+  max-width: 45rem;
+  animation: fade-in 0.3s ease-in-out;
+  position: relative;
+  @extend %flex-center;
+  flex-direction: column;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+.input {
+  padding: 0.8rem;
+  border: 1px solid $grey-color;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+}
+
+.textarea {
+  padding: 0.8rem;
+  border: 0.1rem solid $grey-color;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  resize: none;
+  height: 10rem;
+}
+
+.error {
+  color: $danger-color;
+  font-size: 1.4rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.submit-button {
+  @include button-style($main-color, $main-dark-color);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

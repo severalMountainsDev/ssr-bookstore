@@ -1,0 +1,33 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.not-found-container {
+  @extend %flex-center;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+}
+
+.not-found-title {
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+}
+
+.not-found-text {
+  font-size: 1.8rem;
+}
+
+.not-found-button {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  background-color: $main-color;
+  color: $black-color;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $main-dark-color;
+  }
+}

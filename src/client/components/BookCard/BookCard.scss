@@ -1,0 +1,56 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.book-details {
+  padding: 3rem 0;
+  display: flex;
+  background-color: $grey-light-color;
+}
+
+.book-item {
+  padding: 3rem 2rem;
+  border-radius: 0.4rem;
+  background-color: $white-color;
+  box-shadow: $extra-light-black-color 0 0.5rem 1.5rem 0;
+  transition: $transition;
+  max-width: 30rem;
+  min-height: 40rem;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: $light-black-color 0 0.5rem 1.5rem 0;
+  }
+}
+
+.book-item-info {
+  margin-top: 2rem;
+}
+
+.book-item-info-item.title {
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.book-item-info-item.author {
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+  font-size: 1.5rem;
+}
+
+.book-item-info-item:not(.title) span:last-child {
+  opacity: 0.8;
+}
+
+.book-item-info-item.publish-year {
+  opacity: 0.6;
+  font-style: italic;
+  font-size: 1.4rem;
+}
+
+.subtitle {
+  text-transform: capitalize;
+  font-weight: 700;
+}

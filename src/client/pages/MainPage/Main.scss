@@ -1,0 +1,48 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.booklist {
+  padding: 3rem 0;
+  background-color: $grey-light-color;
+}
+
+.booklist-content {
+  gap: 3rem;
+  display: grid;
+  height: 100%;
+
+  @include respond-to("small") {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @include respond-to("medium") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to("large") {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include respond-to("xlarge") {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.buttons-container {
+  @extend %flex-center;
+  padding: 1rem;
+}
+
+.delete-button {
+  @include button-style($danger-color, $danger-dark-color);
+}
+
+.details-button {
+  @include button-style($main-color, $main-dark-color);
+}
+
+.empty-book {
+  @extend %flex-center;
+  min-height: 45rem;
+  padding: 5rem;
+}
