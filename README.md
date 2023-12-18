@@ -11,6 +11,7 @@ This is a Server-Side Rendered (SSR) React application built using React, TypeSc
 * Formik & Yup: Streamlined form handling and validation.
 * Sass Support: Enhanced styling capabilities with Sass. 
 * Helmet: For proper SEO management.
+* CI/CD Pipeline: Heroku & GitHub Actions.
 
 ### Development and Production Scripts
 * `npm run dev`: Runs the application in development mode with hot reloading.
